@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex Tester — Free Online | Tabutility</title>
+  <meta name="description" content="Test regular expressions against any string in real-time. View matches, groups, flags and more.">
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://regex-tester.tabutility.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://regex-tester.tabutility.com/">
+  <meta property="og:title" content="Regex Tester — Free Online | Tabutility">
+  <meta property="og:description" content="Test regular expressions against any string in real-time. View matches, groups, flags and more.">
+  <meta property="og:image" content="https://tabutility.com/og-blog.png">
+  <meta property="og:site_name" content="Tabutility">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tabutility.com/og-blog.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <meta name="theme-color" content="#0f172a">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Regex Tester","url":"https://regex-tester.tabutility.com/","description":"Test regular expressions against any string in real-time. View matches, groups, flags and more.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Regex Tester","item":"https://regex-tester.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a regex?","acceptedAnswer":{"@type":"Answer","text":"A regex (regular expression) is a sequence of characters that forms a search pattern. It is used to match, find or replace strings."}},{"@type":"Question","name":"What flags are supported?","acceptedAnswer":{"@type":"Answer","text":"This tester supports g (global), i (case-insensitive), m (multiline), s (dotAll) and u (unicode) flags."}},{"@type":"Question","name":"Is my text kept private?","acceptedAnswer":{"@type":"Answer","text":"Yes — all processing happens in your browser. Nothing is sent to a server."}}]}</script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+</head>
+<body style="margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh">
+<nav style="background:#1e293b;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #334155"><a href="https://tabutility.com" style="color:#fff;font-weight:800;font-size:16px;text-decoration:none">⚡ Tabutility</a><a href="https://tabutility.com/blog/" style="color:#a5b4fc;font-size:13px;font-weight:700;text-decoration:none">📖 Blog</a></nav>
+<div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div id="app" style="max-width:640px;margin:8px auto;padding:0 8px 32px">
+  <h1 style="font-size:24px;font-weight:800;margin:0 0 4px">🔍 Regex Tester</h1>
+  <p style="color:#94a3b8;font-size:14px;margin:0 0 20px">Test regular expressions in real-time. Matches are highlighted instantly.</p>
+  <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155;margin-bottom:14px">
+    <label style="font-size:12px;color:#94a3b8;font-weight:600;display:block;margin-bottom:6px">REGULAR EXPRESSION</label>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="color:#64748b;font-size:18px">/</span>
+      <input id="pattern" type="text" placeholder="e.g. \b\w+@\w+\.\w+\b" oninput="test()" style="flex:1;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 12px;color:#f1f5f9;font-size:14px;font-family:monospace;outline:none">
+      <span style="color:#64748b;font-size:18px">/</span>
+      <input id="flags" type="text" value="gi" oninput="test()" style="width:60px;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 8px;color:#a5b4fc;font-size:14px;font-family:monospace;outline:none;text-align:center">
+    </div>
+    <div id="pattern-err" style="color:#f87171;font-size:12px;margin-top:6px;min-height:16px"></div>
+  </div>
+  <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155;margin-bottom:14px">
+    <label style="font-size:12px;color:#94a3b8;font-weight:600;display:block;margin-bottom:6px">TEST STRING</label>
+    <textarea id="teststr" rows="5" oninput="test()" placeholder="Paste your test string here..." style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 12px;color:#f1f5f9;font-size:14px;font-family:monospace;outline:none;resize:vertical"></textarea>
+  </div>
+  <div id="results" style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155;margin-bottom:14px;display:none">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <span style="font-size:13px;font-weight:700;color:#f1f5f9">Results</span>
+      <span id="match-count" style="font-size:12px;color:#4ade80;font-weight:600"></span>
+    </div>
+    <div id="highlighted" style="background:#0f172a;border-radius:6px;padding:12px;font-size:14px;font-family:monospace;line-height:1.7;word-break:break-all;white-space:pre-wrap"></div>
+    <div id="groups-section" style="margin-top:14px;display:none">
+      <div style="font-size:12px;color:#94a3b8;font-weight:600;margin-bottom:8px">CAPTURE GROUPS</div>
+      <div id="groups-list" style="font-size:13px;font-family:monospace;color:#f1f5f9"></div>
+    </div>
+  </div>
+  <div id="no-pattern" style="color:#64748b;font-size:14px;text-align:center;padding:20px">Enter a pattern above to start testing</div>
+</div>
+<script>
+function test(){
+  const pat=document.getElementById('pattern').value;
+  const flags=document.getElementById('flags').value;
+  const str=document.getElementById('teststr').value;
+  const err=document.getElementById('pattern-err');
+  const res=document.getElementById('results');
+  const np=document.getElementById('no-pattern');
+  if(!pat){err.textContent='';res.style.display='none';np.style.display='block';return;}
+  let rx;
+  try{rx=new RegExp(pat,flags);err.textContent='';}
+  catch(e){err.textContent='⚠ '+e.message;res.style.display='none';np.style.display='none';return;}
+  np.style.display='none';res.style.display='block';
+  const matches=[...str.matchAll(new RegExp(pat,flags.includes('g')?flags:flags+'g'))];
+  document.getElementById('match-count').textContent=matches.length+' match'+(matches.length===1?'':'es')+' found';
+  // Highlight
+  let highlighted=str;
+  let offset=0;
+  const spans=[];
+  matches.forEach(m=>{
+    spans.push({start:m.index,end:m.index+m[0].length});
+  });
+  let result='';let pos=0;
+  spans.forEach(s=>{
+    result+=escHtml(str.slice(pos,s.start));
+    result+='<mark style="background:#fbbf24;color:#0f172a;border-radius:2px">'+escHtml(str.slice(s.start,s.end))+'</mark>';
+    pos=s.end;
+  });
+  result+=escHtml(str.slice(pos));
+  document.getElementById('highlighted').innerHTML=result||'<span style="color:#475569">(empty test string)</span>';
+  // Groups
+  const gs=document.getElementById('groups-section');
+  const gl=document.getElementById('groups-list');
+  const hasGroups=matches.some(m=>m.length>1);
+  if(hasGroups){
+    gs.style.display='block';
+    gl.innerHTML=matches.map((m,i)=>'Match '+(i+1)+': '+m.slice(1).map((g,j)=>'Group '+(j+1)+': <span style="color:#4ade80">'+(g===undefined?'<i style="color:#64748b">undefined</i>':escHtml(g))+'</span>').join(' | ')).join('<br>');
+  } else {gs.style.display='none';}
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+</script>
+<div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://go.nordvpn.net/aff_c?offer_id=15&aff_id=153622&url_id=902','_blank','noopener noreferrer')" title="Stay private online">
+  <span style="font-size:28px;flex-shrink:0">🛡️</span>
+  <div style="min-width:0">
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Stay private online</div>
+    <div style="font-size:12px;color:#94a3b8">Protect your connection with NordVPN <span style="color:#4ade80;white-space:nowrap">→ Get NordVPN</span></div>
+    <div style="font-size:10px;color:#475569;margin-top:3px">Sponsored · Ad</div>
+  </div>
+</div>
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=programming+coding+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Level up your dev skills?">
+  <span style="font-size:28px;flex-shrink:0">📚</span>
+  <div style="min-width:0">
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Level up your dev skills?</div>
+    <div style="font-size:12px;color:#94a3b8">Browse programming books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
+  </div>
+</div>
+<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+<div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://json-formatter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://base64-encoder.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Base64 Encoder / Decoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://url-encoder.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">URL Encoder / Decoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://uuid-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    </div>
+</body>
+</html>
