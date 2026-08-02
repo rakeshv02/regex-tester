@@ -130,5 +130,35 @@ function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(
       <a href="https://uuid-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
         <div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
     </div>
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    @media (prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <p>This regex tester lets you write a regular expression, run it against sample text and instantly see which parts match — no setup or installs required. It highlights matches and captured groups so you can debug a pattern before dropping it into your code. It is aimed at developers, data wranglers and anyone learning regular expressions in JavaScript, Python or similar languages.</p>
+  <h2>How the Regex Tester Works</h2>
+  <p>You enter a pattern and optional flags, then paste the text you want to search. The tool compiles your expression using the browser's built-in JavaScript regular-expression engine and runs it against your input in real time, marking every match it finds. Because it uses the native engine, the behavior matches what you would see in JavaScript code.</p>
+  <p>Flags change how the pattern behaves: the global flag finds every match instead of just the first, and the case-insensitive flag ignores letter case. Captured groups — the parts of a pattern inside parentheses — are shown separately so you can confirm you are extracting exactly the right substrings.</p>
+  <div class="example">
+    <strong>Example:</strong> The pattern <code>\d{3}-\d{4}</code> matches a phone fragment like <em>555-1234</em> by requiring three digits, a hyphen and four digits.
+  </div>
+  <div class="example">
+    <strong>Example:</strong> Using <code>\b\w+@\w+\.\w+\b</code> with the global flag against a paragraph pulls out every simple email address, such as <em>hi@example.com</em>, so you can verify the pattern before using it in code.
+  </div>
+  <h2>Frequently Asked Questions</h2>
+  <h3>What is a regex?</h3>
+  <p>A regex (regular expression) is a sequence of characters that forms a search pattern. It is used to match, find or replace strings, and is supported by most programming languages and text editors.</p>
+  <h3>What flags are supported?</h3>
+  <p>This tester supports the g (global), i (case-insensitive), m (multiline), s (dotAll) and u (unicode) flags. You can combine them, for example gi to find every match regardless of case.</p>
+  <h3>Is my text kept private?</h3>
+  <p>Yes — all processing happens in your browser and nothing is sent to a server. Your pattern and test text never leave your device, so you can safely test on sensitive data.</p>
+  <h3>Why isn't my regex matching?</h3>
+  <p>Common causes are forgetting the global flag when you expect multiple matches, using characters that need escaping such as a literal dot or bracket, or a pattern that is stricter than your text. Test with small inputs and add pieces of the pattern gradually to find the issue.</p>
+</section>
+
 </body>
 </html>
